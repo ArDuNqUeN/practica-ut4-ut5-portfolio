@@ -1,0 +1,207 @@
+/* ============================= */
+/* VARIABLES DE COLOR */
+/* ============================= */
+:root {
+    --negro-principal: #121212;
+    --negro-secundario: #1e1e1e;
+    --morado-principal: #7b2cbf;
+    --morado-hover: #9d4edd;
+    --gris-claro: #f5f5f5;
+}
+
+/* ============================= */
+/* BODY GENERAL */
+/* ============================= */
+body {
+    background-color: var(--negro-principal);
+    color: var(--gris-claro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+.navbar {
+    background-color: var(--negro-secundario) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--morado-principal) !important;
+}
+
+.nav-link {
+    color: var(--gris-claro) !important;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--morado-principal) !important;
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
+.btn-primary {
+    background-color: var(--morado-principal);
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--morado-hover);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--morado-principal);
+    border-color: var(--morado-principal);
+}
+
+/* ============================= */
+/* SECCIONES GENERALES */
+/* ============================= */
+section {
+    padding: 2rem 0;
+}
+
+section h1, section h2, section h3 {
+    color: var(--morado-principal);
+    font-weight: 700;
+}
+
+.lead, section p {
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* CARRUSEL */
+/* ============================= */
+.carousel-inner img {
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.carousel-caption h5 {
+    color: var(--morado-principal);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--morado-principal);
+}
+
+/* ============================= */
+/* HABILIDADES DESTACADAS */
+/* ============================= */
+section .col-md-4 {
+    background-color: var(--negro-secundario);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+section .col-md-4:hover {
+    transform: translateY(-5px);
+    background-color: #2a2a2a;
+}
+
+section .col-md-4 h5, section h3 {
+    color: var(--morado-principal);
+}
+
+/* ============================= */
+/* FORMULARIO CONTACTO */
+/* ============================= */
+form {
+    background-color: var(--negro-secundario);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(123, 44, 191, 0.2);
+}
+
+.form-label {
+    color: var(--morado-principal);
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: var(--gris-claro);
+}
+
+.form-control:focus {
+    background-color: #2a2a2a;
+    border-color: var(--morado-principal);
+    box-shadow: 0 0 8px var(--morado-principal);
+    color: var(--gris-claro);
+}
+
+textarea {
+    resize: none;
+}
+
+/* ============================= */
+/* PROYECTOS POPULARES DESTACADOS */
+/* ============================= */
+.destacado {
+    border: 2px solid var(--morado-principal);
+    box-shadow: 0 0 15px rgba(123, 44, 191, 0.3);
+}
+
+.proyecto-card .card-title {
+    color: var(--morado-principal);
+    font-weight: 600;
+}
+
+.proyecto-card .card-text {
+    color: #ccc;
+}
+
+.proyecto-card .btn {
+    transition: background-color 0.3s ease;
+}
+
+.proyecto-card .btn:hover {
+    background-color: var(--morado-hover);
+    border-color: var(--morado-hover);
+}
+
+/* ============================= */
+/* SOBRE MÍ - IMAGEN Y TEXTO */
+/* ============================= */
+section img {
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.4);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+footer {
+    background-color: var(--negro-secundario);
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* ============================= */
+/* RESPONSIVE AJUSTES */
+/* ============================= */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        max-height: 300px;
+    }
+
+    section img {
+        margin-bottom: 20px;
+    }
+}
