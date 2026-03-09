@@ -75,13 +75,13 @@ footer {
 /* PROYECTOS - SOLO ID #proyectos */
 #proyectos .project-card-link { text-decoration: none; display: block; }
 #proyectos .project-card {
-    position: relative;
-    overflow: hidden;
     border-radius: 12px;
     cursor: pointer;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
+    background: var(--negro-secundario);
+    overflow: hidden;
 }
 
 /* Imagen rectangular completa */
@@ -89,34 +89,30 @@ footer {
     width: 100%;
     height: 180px;       /* altura rectangular */
     object-fit: cover;   /* recorta bien manteniendo proporción */
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     transition: transform 0.3s ease;
 }
 
-/* Overlay estilo Netflix */
-#proyectos .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(123,44,191,0.3);
-    display: flex; justify-content: center; align-items: center;
-    transition: background 0.3s ease;
-    padding: 20px;
-    border-radius: 12px;
-}
-
+/* Información del proyecto debajo */
 #proyectos .project-info {
-    color: white;
+    padding: 15px;
+    color: var(--gris-claro);
     text-align: center;
-    transition: opacity 0.3s ease;
+    background: var(--negro-secundario);
 }
 
-#proyectos .project-card:hover .overlay {
-    background: rgba(0,0,0,0);
+#proyectos .project-info h5 {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--morado-principal);
 }
-#proyectos .project-card:hover .project-info {
-    opacity: 0;
+
+#proyectos .project-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gris-claro);
 }
+
 #proyectos .project-card:hover {
     transform: scale(1.05);
 }
@@ -127,92 +123,53 @@ footer {
 }
 
 /* ============================= */
-/* CARRUSEL INICIO - SOLO INDEX */
-#index .carousel-inner img {
-    width: 80%;
-    max-height: 350px;
-    object-fit: contain;
-    margin: 0 auto;
-}
-@media (max-width: 992px) {
-    #index .carousel-inner img {
-        width: 90%;
-        max-height: 300px;
-    }
-}
-@media (max-width: 576px) {
-    #index .carousel-inner img {
-        width: 100%;
-        max-height: 250px;
-    }
-}
-/* ============================= */
 /* CARRUSEL - SOLO INDEX */
 #index .carousel-inner {
+    min-height: 500px;
     display: flex;
-    justify-content: center; /* centra las imágenes */
+    align-items: center;
+    justify-content: center;
+}
+
+#index .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#index .carousel-item a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-#index .carousel-inner img {
-    width: 60%;
-    max-height: 400px;
-    object-fit: contain;
-    margin: 0 auto;
-    border-radius: 20px; /* esquinas más redondeadas */
-    transition: all 0.5s ease;
-}
-
-/* Imagen activa al frente */
-#index .carousel-item.active img {
-    width: 75%;
+#index .carousel-item img {
+    max-width: 75%;
     max-height: 500px;
+    object-fit: contain;
+    border-radius: 20px;
 }
 
 /* Responsive carrusel */
 @media (max-width: 992px) {
-    #index .carousel-inner img {
-        width: 80%;
-        max-height: 350px;
+    #index .carousel-inner {
+        min-height: 400px;
     }
-    #index .carousel-item.active img {
-        width: 85%;
-        max-height: 400px;
-    }
-}
-
-@media (max-width: 576px) {
-    #index .carousel-inner img {
-        width: 100%;
-        max-height: 250px;
-    }
-    #index .carousel-item.active img {
-        width: 100%;
-        max-height: 300px;
-    }
-}
-/* ============================= */
-/* CARRUSEL - SOLO INDEX */
-#index .carousel-inner img {
-    display: block;      /* necesario para centrar */
-    margin: 0 auto;      /* centra horizontalmente */
-    max-width: 75%;      /* ocupa 75% del contenedor */
-    max-height: 500px;   /* altura máxima */
-    object-fit: contain;  /* mantiene proporción */
-    border-radius: 20px;  /* esquinas redondeadas */
-    transition: all 0.5s ease;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    #index .carousel-inner img {
+    
+    #index .carousel-item img {
         max-width: 85%;
         max-height: 400px;
     }
 }
 
 @media (max-width: 576px) {
-    #index .carousel-inner img {
+    #index .carousel-inner {
+        min-height: 300px;
+    }
+    
+    #index .carousel-item img {
         max-width: 95%;
         max-height: 300px;
     }
