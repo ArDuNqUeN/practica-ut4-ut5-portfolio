@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" id="portfolio">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Mis Proyectos</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body id="portfolio">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <img src="recursos/img/Logo.png" alt="Logo de Ardunquen" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <a class="navbar-brand" href="index.html">Portfolio de Aidan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Mostrar menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link active" href="portfolio.html">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle" aria-label="Alternar entre modo claro y oscuro">
+          <span class="slider"></span>
+        </label>
+    </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<section class="container text-center my-5">
+    <h1 class="mb-3">Mi Portfolio</h1>
+    <p class="lead">Aquí se muestran los trabajos y proyectos realizados durante el curso de Desarrollo de Aplicaciones Web. Cada proyecto representa una experiencia de aprendizaje en diseño web, desarrollo frontend y backend.</p>
+</section>
+
+<!-- ================= PORTFOLIO GRID ================= -->
+<section id="proyectos" class="container mb-5">
+    <div class="row g-4">
+
+        <!-- Proyecto 1 -->
+        <div class="col-md-4 col-sm-6">
+            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
+                <div class="project-card">
+                    <img src="recursos/img/proyecto1.jpg" alt="Proyecto 1" class="project-img">
+                    <div class="project-info">
+                        <h5>Página Web Estática</h5>
+                        <p>Página HTML5 con CSS responsive. Primer proyecto del curso.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="col-md-4 col-sm-6">
+            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
+                <div class="project-card">
+                    <img src="recursos/img/proyecto2.jpg" alt="Proyecto 2" class="project-img">
+                    <div class="project-info">
+                        <h5>Aplicación DAW</h5>
+                        <p>Aplicación web interactiva con JavaScript y Bootstrap.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="col-md-4 col-sm-6">
+            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
+                <div class="project-card">
+                    <img src="recursos/img/proyecto3.jpg" alt="Proyecto 3" class="project-img">
+                    <div class="project-info">
+                        <h5>Landing Page Responsive</h5>
+                        <p>Landing page moderna y completamente adaptive a cualquier dispositivo.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Proyecto 4 -->
+        <div class="col-md-4 col-sm-6">
+            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
+                <div class="project-card">
+                    <img src="recursos/img/proyecto4.jpg" alt="Proyecto 4" class="project-img">
+                    <div class="project-info">
+                        <h5>Portafolio Personal</h5>
+                        <p>Sitio web completo con galería de proyectos y formulario de contacto.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Proyecto 5 -->
+        <div class="col-md-4 col-sm-6">
+            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
+                <div class="project-card">
+                    <img src="recursos/img/proyecto5.jpg" alt="Proyecto 5" class="project-img">
+                    <div class="project-info">
+                        <h5>Sistema de Carrito</h5>
+                        <p>Carrito de compras funcional con localStorage y cálculo dinámico.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Proyecto 6 -->
+        <div class="col-md-4 col-sm-6">
+            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
+                <div class="project-card">
+                    <img src="recursos/img/proyecto6.jpg" alt="Proyecto 6" class="project-img">
+                    <div class="project-info">
+                        <h5>Dashboard Interactivo</h5>
+                        <p>Panel de control con gráficos, estadísticas y tema oscuro/claro.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center p-3">
+    <p class="mb-0">Copyright © 2026 Aidan - Portfolio Personal</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const toggle = document.getElementById('toggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  toggle.checked = true;
+}
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
+</script>
+
+</body>
+</html>
