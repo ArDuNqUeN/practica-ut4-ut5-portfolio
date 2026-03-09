@@ -125,51 +125,71 @@ footer {
 /* ============================= */
 /* CARRUSEL - SOLO INDEX */
 #index .carousel-inner {
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#index .carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    background: transparent;
 }
 
 #index .carousel-item a {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-#index .carousel-item img {
+#index .carousel-img {
     max-width: 75%;
     max-height: 500px;
     object-fit: contain;
     border-radius: 20px;
 }
 
+/* Botones de control del carrusel */
+#index .carousel-control-prev,
+#index .carousel-control-next {
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
+}
+
+#index .carousel-control-prev-icon,
+#index .carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+/* Indicadores del carrusel */
+#index .carousel-indicators button {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    transition: all 0.3s ease;
+}
+
+#index .carousel-indicators button.active {
+    background-color: var(--morado-principal);
+    width: 12px;
+    height: 12px;
+}
+
+/* Modo oscuro - ajustes opcionales */
+:root:has(#toggle:checked) #index .carousel-control-prev-icon,
+:root:has(#toggle:checked) #index .carousel-control-next-icon {
+    background-color: rgba(255,255,255,0.5);
+}
+
+:root:has(#toggle:checked) #index .carousel-indicators button {
+    background-color: rgba(255,255,255,0.5);
+}
+
 /* Responsive carrusel */
 @media (max-width: 992px) {
-    #index .carousel-inner {
-        min-height: 400px;
-    }
-    
-    #index .carousel-item img {
+    #index .carousel-img {
         max-width: 85%;
         max-height: 400px;
     }
 }
 
 @media (max-width: 576px) {
-    #index .carousel-inner {
-        min-height: 300px;
-    }
-    
-    #index .carousel-item img {
+    #index .carousel-img {
         max-width: 95%;
         max-height: 300px;
     }
