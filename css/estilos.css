@@ -246,3 +246,33 @@ input:checked + .slider:before {
 .switch input:focus + .slider {
   box-shadow: 0 0 0 2px var(--morado-principal);
 }
+
+/* ============================= */
+/* BUSCADOR EN NAVBAR */
+.navbar .form-control {
+    background-color: var(--negro-secundario);
+    color: var(--gris-claro);
+    border-color: var(--morado-principal);
+}
+
+.navbar .form-control:focus {
+    background-color: var(--negro-secundario);
+    color: var(--gris-claro);
+    border-color: var(--morado-hover);
+    box-shadow: 0 0 0 0.2rem rgba(123, 44, 191, 0.25);
+}
+
+.navbar .btn-outline-light {
+    border-color: var(--morado-principal);
+    color: var(--gris-claro);
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: var(--morado-principal);
+    border-color: var(--morado-hover);
+}
+
+/* Placeholder del buscador */
+.navbar .form-control::placeholder {
+    color: var(--gris-claro);
+}
