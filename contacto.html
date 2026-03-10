@@ -14,23 +14,44 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ================= NAV ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-       <img src="recursos/img/Logo.png" alt="Logo de Ardunquen" width="40" height="40" class="d-inline-block align-text-top me-2">
+        <img src="recursos/img/Logo.png" alt="Logo de Ardunquen" width="40" height="40" class="d-inline-block align-text-top me-2">
         <a class="navbar-brand" href="index.html">Portfolio de Aidan</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Mostrar menú">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-                <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="sobre-mi.html" id="navbarDropdownSobreMi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sobre mí
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownSobreMi">
+                        <li><a class="dropdown-item" href="sobre-mi.html#perfil">Perfil</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#habilidades">Habilidades</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#certificados">Certificados</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="portfolio.html" id="navbarDropdownProyectos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Proyectos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProyectos">
+                        <li><a class="dropdown-item" href="portfolio.html#web">Web</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#apps">Apps</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#otros">Otros</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
             </ul>
         </div>
+        <form class="d-flex ms-auto me-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar proyecto..." aria-label="Buscar proyecto">
+            <button class="btn btn-outline-light" type="submit" aria-label="Buscar">Buscar</button>
+        </form>
         <label class="switch">
           <input type="checkbox" id="toggle" aria-label="Alternar entre modo claro y oscuro">
           <span class="slider"></span>

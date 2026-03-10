@@ -25,11 +25,33 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-                <li class="nav-item"><a class="nav-link active" href="portfolio.html">Proyectos</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="sobre-mi.html" id="navbarDropdownSobreMi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sobre mí
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownSobreMi">
+                        <li><a class="dropdown-item" href="sobre-mi.html#perfil">Perfil</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#habilidades">Habilidades</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#certificados">Certificados</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="portfolio.html" id="navbarDropdownProyectos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Proyectos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProyectos">
+                        <li><a class="dropdown-item" href="#web">Web</a></li>
+                        <li><a class="dropdown-item" href="#apps">Apps</a></li>
+                        <li><a class="dropdown-item" href="#otros">Otros</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             </ul>
         </div>
+        <form class="d-flex ms-auto me-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar proyecto..." aria-label="Buscar proyecto">
+            <button class="btn btn-outline-light" type="submit" aria-label="Buscar">Buscar</button>
+        </form>
         <label class="switch">
           <input type="checkbox" id="toggle" aria-label="Alternar entre modo claro y oscuro">
           <span class="slider"></span>
@@ -43,10 +65,10 @@
     <p class="lead">Aquí se muestran los trabajos y proyectos realizados durante el curso de Desarrollo de Aplicaciones Web. Cada proyecto representa una experiencia de aprendizaje en diseño web, desarrollo frontend y backend.</p>
 </section>
 
-<!-- ================= PORTFOLIO GRID ================= -->
-<section id="proyectos" class="container mb-5">
+<!-- ================= PROYECTOS WEB ================= -->
+<section id="web" class="container mb-5">
+    <h2 class="text-center mb-4">Proyectos Web</h2>
     <div class="row g-4">
-
         <!-- Proyecto 1 -->
         <div class="col-md-4 col-sm-6">
             <a href="#" class="project-card-link" rel="nofollow" target="_blank">
@@ -59,7 +81,14 @@
                 </div>
             </a>
         </div>
+        <!-- Más proyectos web aquí -->
+    </div>
+</section>
 
+<!-- ================= PROYECTOS APPS ================= -->
+<section id="apps" class="container mb-5">
+    <h2 class="text-center mb-4">Proyectos Apps</h2>
+    <div class="row g-4">
         <!-- Proyecto 2 -->
         <div class="col-md-4 col-sm-6">
             <a href="#" class="project-card-link" rel="nofollow" target="_blank">
@@ -72,20 +101,6 @@
                 </div>
             </a>
         </div>
-
-        <!-- Proyecto 3 -->
-        <div class="col-md-4 col-sm-6">
-            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
-                <div class="project-card">
-                    <img src="recursos/img/proyecto3.jpg" alt="Proyecto 3" class="project-img">
-                    <div class="project-info">
-                        <h5>Landing Page Responsive</h5>
-                        <p>Landing page moderna y completamente adaptive a cualquier dispositivo.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
         <!-- Proyecto 4 -->
         <div class="col-md-4 col-sm-6">
             <a href="#" class="project-card-link" rel="nofollow" target="_blank">
@@ -98,7 +113,26 @@
                 </div>
             </a>
         </div>
+        <!-- Más proyectos apps aquí -->
+    </div>
+</section>
 
+<!-- ================= PROYECTOS OTROS ================= -->
+<section id="otros" class="container mb-5">
+    <h2 class="text-center mb-4">Otros Proyectos</h2>
+    <div class="row g-4">
+        <!-- Proyecto 3 -->
+        <div class="col-md-4 col-sm-6">
+            <a href="#" class="project-card-link" rel="nofollow" target="_blank">
+                <div class="project-card">
+                    <img src="recursos/img/proyecto3.jpg" alt="Proyecto 3" class="project-img">
+                    <div class="project-info">
+                        <h5>Landing Page Responsive</h5>
+                        <p>Landing page moderna y completamente adaptive a cualquier dispositivo.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
         <!-- Proyecto 5 -->
         <div class="col-md-4 col-sm-6">
             <a href="#" class="project-card-link" rel="nofollow" target="_blank">
@@ -111,7 +145,6 @@
                 </div>
             </a>
         </div>
-
         <!-- Proyecto 6 -->
         <div class="col-md-4 col-sm-6">
             <a href="#" class="project-card-link" rel="nofollow" target="_blank">
@@ -124,7 +157,6 @@
                 </div>
             </a>
         </div>
-
     </div>
 </section>
 

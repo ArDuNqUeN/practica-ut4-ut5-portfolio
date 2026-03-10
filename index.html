@@ -25,18 +25,32 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio.html">Proyectos</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="sobre-mi.html" id="navbarDropdownSobreMi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sobre mí
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownSobreMi">
+                        <li><a class="dropdown-item" href="sobre-mi.html#perfil">Perfil</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#habilidades">Habilidades</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#certificados">Certificados</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="portfolio.html" id="navbarDropdownProyectos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Proyectos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProyectos">
+                        <li><a class="dropdown-item" href="portfolio.html#web">Web</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#apps">Apps</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#otros">Otros</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             </ul>
         </div>
         <form class="d-flex ms-auto me-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar proyecto..." aria-label="Buscar proyecto">
-            <button class="btn btn-outline-light" type="submit" aria-label="Buscar">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 0 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
-            </button>
+            <button class="btn btn-outline-light" type="submit" aria-label="Buscar">Buscar</button>
         </form>
         <label class="switch">
           <input type="checkbox" id="toggle" aria-label="Alternar entre modo claro y oscuro">

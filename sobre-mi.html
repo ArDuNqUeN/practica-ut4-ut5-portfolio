@@ -25,11 +25,33 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link active" href="sobre-mi.html">Sobre mí</a></li>
-                <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="sobre-mi.html" id="navbarDropdownSobreMi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sobre mí
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownSobreMi">
+                        <li><a class="dropdown-item" href="#perfil">Perfil</a></li>
+                        <li><a class="dropdown-item" href="#habilidades">Habilidades</a></li>
+                        <li><a class="dropdown-item" href="#certificados">Certificados</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="portfolio.html" id="navbarDropdownProyectos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Proyectos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProyectos">
+                        <li><a class="dropdown-item" href="portfolio.html#web">Web</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#apps">Apps</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#otros">Otros</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
             </ul>
         </div>
+        <form class="d-flex ms-auto me-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar proyecto..." aria-label="Buscar proyecto">
+            <button class="btn btn-outline-light" type="submit" aria-label="Buscar">Buscar</button>
+        </form>
         <label class="switch">
           <input type="checkbox" id="toggle" aria-label="Alternar entre modo claro y oscuro">
           <span class="slider"></span>
@@ -38,7 +60,7 @@
 </nav>
 
 <!-- ================= SOBRE MÍ ================= -->
-<section class="container my-5">
+<section id="perfil" class="container my-5">
     <h1 class="text-center mb-5">Sobre mí</h1>
 
     <div class="row align-items-center">
@@ -76,7 +98,7 @@
 </section>
 
 <!-- ================= HABILIDADES TÉCNICAS ================= -->
-<section class="container my-5">
+<section id="habilidades" class="container my-5">
     <h2 class="text-center mb-4">Habilidades Técnicas</h2>
     <div class="row text-center">
         <div class="col-md-4 mb-4">
@@ -142,6 +164,13 @@
             <p>Constancia y compromiso</p>
         </div>
     </div>
+</section>
+
+<!-- ================= CERTIFICADOS ================= -->
+<section id="certificados" class="container my-5">
+    <h2 class="text-center mb-4">Certificados</h2>
+    <p class="text-center">Aquí puedes añadir tus certificados. Por ejemplo, certificados en HTML, CSS, JavaScript, etc.</p>
+    <!-- Añade contenido aquí -->
 </section>
 
 <!-- ================= FOOTER ================= -->
