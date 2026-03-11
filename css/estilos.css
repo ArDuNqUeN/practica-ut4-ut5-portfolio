@@ -272,6 +272,21 @@ input:checked + .slider:before {
     border-color: var(--morado-hover);
 }
 
+/* Separador entre datos y formulario */
+.separador {
+    width: 60%;                  /* Ocupa solo parte del ancho */
+    height: 1px;                 /* Línea fina */
+    margin: 0 auto;              /* Centrada */
+    background-color: var(--morado-principal); /* Color principal */
+    opacity: 0.4;                /* Sutil */
+    border-radius: 1px;          /* Bordes suaves */
+}
+
+/* Modo oscuro */
+:root:has(#toggle:checked) .separador {
+    background-color: var(--morado-hover);
+    opacity: 0.6;
+}
 /* Placeholder del buscador */
 .navbar .form-control::placeholder {
     color: var(--gris-claro);
