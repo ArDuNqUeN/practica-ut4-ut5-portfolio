@@ -364,3 +364,26 @@ text-align: center;
 .idioma-card p { margin: 0; }
 
 .idioma-card:hover { transform: scale(1.05); }
+
+/* ============================= */
+/* TOGGLE DE MODO CLARO / OSCURO */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url("data:image/svg+xml,%3csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='12' cy='12' r='5' fill='%23FFFFFF'/%3e%3cline x1='12' y1='1' x2='12' y2='3' stroke='%23FFFFFF'/%3e%3cline x1='12' y1='21' x2='12' y2='23' stroke='%23FFFFFF'/%3e%3cline x1='4.22' y1='4.22' x2='5.64' y2='5.64' stroke='%23FFFFFF'/%3e%3cline x1='18.36' y1='18.36' x2='19.78' y2='19.78' stroke='%23FFFFFF'/%3e%3cline x1='1' y1='12' x2='3' y2='12' stroke='%23FFFFFF'/%3e%3cline x1='21' y1='12' x2='23' y2='12' stroke='%23FFFFFF'/%3e%3cline x1='4.22' y1='19.78' x2='5.64' y2='18.36' stroke='%23FFFFFF'/%3e%3cline x1='18.36' y1='5.64' x2='19.78' y2='4.22' stroke='%23FFFFFF'/%3e%3c/svg%3e"); /* Sol */
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Cuando el toggle está activado, mostrar luna */
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-image: url("data:image/svg+xml,%3csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z' fill='%23FFFFFF'/%3e%3c/svg%3e"); /* Luna */
+}
