@@ -17,43 +17,55 @@
 <!-- ================= NAV ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <img src="recursos/img/Logo.png" alt="Logo de Ardunquen" width="40" height="40" class="d-inline-block align-text-top me-2">
-        <a class="navbar-brand" href="index.html">Portfolio de Aidan</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Mostrar menú">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Ir al inicio del portfolio de Aidan">
+            <img src="recursos/img/Logo.png" alt="Logo de Ardunquen" width="40" height="40" class="d-inline-block align-text-top me-2">
+            Portfolio de Aidan
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" 
+                aria-controls="menu" aria-expanded="false" aria-label="Mostrar menú de navegación">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html" aria-label="Ir a inicio">Inicio</a>
+                </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="sobre-mi.html" id="navbarDropdownSobreMi" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="sobre-mi.html" id="navbarDropdownSobreMi" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir menú Sobre mí">
                         Sobre mí
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownSobreMi">
-                        <li><a class="dropdown-item" href="sobre-mi.html#perfil">Perfil</a></li>
-                        <li><a class="dropdown-item" href="sobre-mi.html#habilidades">Habilidades</a></li>
-                        <li><a class="dropdown-item" href="sobre-mi.html#certificados">Certificados</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#perfil" aria-label="Ir a Perfil">Perfil</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#habilidades" aria-label="Ir a Habilidades">Habilidades</a></li>
+                        <li><a class="dropdown-item" href="sobre-mi.html#certificados" aria-label="Ir a Certificados">Certificados</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="portfolio.html" id="navbarDropdownProyectos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="portfolio.html" id="navbarDropdownProyectos" role="button" 
+                       data-bs-toggle="dropdown" aria-expanded="false" aria-label="Abrir menú Proyectos">
                         Proyectos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownProyectos">
-                        <li><a class="dropdown-item" href="portfolio.html#web">Web</a></li>
-                        <li><a class="dropdown-item" href="portfolio.html#apps">Apps</a></li>
-                        <li><a class="dropdown-item" href="portfolio.html#otros">Otros</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#web" aria-label="Ir a Proyectos Web">Web</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#apps" aria-label="Ir a Proyectos Apps">Apps</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html#otros" aria-label="Ir a Otros Proyectos">Otros</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html" aria-label="Ir a Contacto">Contacto</a>
+                </li>
             </ul>
         </div>
-        <form class="d-flex ms-auto me-3" role="search">
+
+        <form class="d-flex ms-auto me-3" role="search" aria-label="Formulario de búsqueda">
             <input class="form-control me-2" type="search" placeholder="Buscar proyecto..." aria-label="Buscar proyecto">
             <button class="btn btn-outline-light" type="submit" aria-label="Buscar">Buscar</button>
         </form>
-        <label class="switch">
-          <input type="checkbox" id="toggle" aria-label="Alternar entre modo claro y oscuro">
+
+        <label class="switch" aria-label="Alternar entre modo claro y oscuro">
+          <input type="checkbox" id="toggle">
           <span class="slider"></span>
         </label>
     </div>
