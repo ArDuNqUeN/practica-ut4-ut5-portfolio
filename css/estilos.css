@@ -301,3 +301,79 @@ input:checked + .slider:before {
 :root:has(#toggle:checked) .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(245,245,245,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+/* ============================= */
+/* BLOQUES DE HABILIDADES */
+
+.skill-blocks{
+display:flex;
+gap:6px;
+margin-top:6px;
+}
+
+.skill-blocks span{
+width:20px;
+height:20px;
+border:2px solid var(--morado-principal);
+background:transparent;
+opacity:0;
+transform:scale(0.6);
+animation: aparecer 0.6s forwards;
+}
+
+/* animación */
+@keyframes aparecer{
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* colorear según nivel */
+
+.level-1 span:nth-child(1),
+.level-2 span:nth-child(-n+2),
+.level-3 span:nth-child(-n+3),
+.level-4 span:nth-child(-n+4),
+.level-5 span:nth-child(-n+5){
+background: var(--morado-principal);
+}
+
+/* retraso progresivo animación */
+
+.skill-blocks span:nth-child(1){animation-delay:0.1s;}
+.skill-blocks span:nth-child(2){animation-delay:0.2s;}
+.skill-blocks span:nth-child(3){animation-delay:0.3s;}
+.skill-blocks span:nth-child(4){animation-delay:0.4s;}
+.skill-blocks span:nth-child(5){animation-delay:0.5s;}
+
+
+#habilidades .skill-blocks{
+justify-content:center;
+}
+#habilidades .col-md-3{
+text-align:center;
+}
+
+/* ============================= */
+/* IDIOMAS */
+
+.idioma-card{
+background: var(--negro-secundario);
+border-radius:10px;
+border:1px solid var(--morado-principal);
+transition:0.3s ease;
+}
+
+.idioma-card h5{
+color: var(--morado-principal);
+font-weight:600;
+margin-bottom:5px;
+}
+
+.idioma-card p{
+margin:0;
+}
+
+.idioma-card:hover{
+transform:scale(1.05);
+}
