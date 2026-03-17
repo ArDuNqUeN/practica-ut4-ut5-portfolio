@@ -392,3 +392,61 @@ input:checked + .slider:before {
 :root:has(#toggle:checked) .card .card-text {
     color: #111111; /* texto oscuro en modo oscuro */
 }
+
+/* TARJETA VERTICAL MÁS ALARGADA Y VERTICAL */
+.vertical-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--negro-secundario);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    width: 220px; /* más estrecha para verticalidad */
+    margin: 0 auto; /* centrar en su columna */
+}
+
+.vertical-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.vertical-card .card-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.vertical-card .card-image img {
+    width: 100%;
+    background-color: #e8e0e8;
+    max-height: 180px;   /* más alta para verticalidad */
+    object-fit: contain;
+    display: block;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.vertical-card:hover .card-image img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.vertical-card .card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.vertical-card .card-content h5 {
+    color: var(--morado-principal);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.vertical-card .card-content p {
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
