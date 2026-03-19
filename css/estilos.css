@@ -10,8 +10,8 @@
 
 /* Modo oscuro */
 :root:has(#toggle:checked) {
-    --negro-principal: #333333;
-    --negro-secundario: #121212;
+    --negro-principal: #121212;
+    --negro-secundario: #333333;
     --morado-principal: #9d4edd;
     --morado-hover: #b794f6;
     --gris-claro: #f5f5f5;
