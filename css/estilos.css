@@ -388,7 +388,7 @@ input:checked + .slider:before {
   background-image: url("data:image/svg+xml,%3csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z' fill='%23FFFFFF'/%3e%3c/svg%3e"); /* Luna */
 }
 
-/* ================= CARD-TEXT EN MODO OSCURO ================= */
+/*  CARD-TEXT EN MODO OSCURO  */
 :root:has(#toggle:checked) .card .card-text {
     color: #111111; /* texto oscuro en modo oscuro */
 }
@@ -449,4 +449,17 @@ input:checked + .slider:before {
     font-size: 0.9rem;
     margin: 0;
     line-height: 1.4;
+}
+
+
+/* ENLACES EN MORADITO */
+
+a{
+    color: var(--morado-principal);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--morado-hover);
+    text-decoration: underline;
 }
