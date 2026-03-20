@@ -454,12 +454,12 @@ input:checked + .slider:before {
 
 /* ENLACES EN MORADITO */
 
-a{
+#contacto .a{
     color: var(--morado-principal);
     text-decoration: none;
 }
 
-a:hover {
+#contacto .a:hover {
     color: var(--morado-hover);
     text-decoration: underline;
 }
