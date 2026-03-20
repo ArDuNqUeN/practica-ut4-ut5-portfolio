@@ -464,3 +464,18 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ============================= */
+/* LOGOS PORTFOLIO MISMO TAMAÑO */
+#portfolio .vertical-card .card-image {
+    height: 180px;              /* altura fija para todos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8e0e8;  /* opcional (ya lo usas) */
+}
+
+#portfolio .vertical-card .card-image img {
+    max-height: 120px;          /* tamaño uniforme del logo */
+    width: auto;
+    object-fit: contain;
+}
