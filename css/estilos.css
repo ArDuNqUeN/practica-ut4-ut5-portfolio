@@ -451,15 +451,13 @@ input:checked + .slider:before {
     line-height: 1.4;
 }
 
-
 /* ENLACES EN MORADITO */
-
-#contacto .a{
+#contacto a {
     color: var(--morado-principal);
     text-decoration: none;
 }
 
-#contacto .a:hover {
+#contacto a:hover {
     color: var(--morado-hover);
     text-decoration: underline;
 }
@@ -478,4 +476,14 @@ input:checked + .slider:before {
     max-height: 120px;          /* tamaño uniforme del logo */
     width: auto;
     object-fit: contain;
+}
+
+/* Quitar subrayado SOLO en enlaces de las cards */
+.project-card-link {
+    text-decoration: none;
+    color: inherit; /* mantiene el color del contenido */
+}
+
+.project-card-link:hover {
+    text-decoration: none; /* evita que aparezca al hacer hover */
 }
