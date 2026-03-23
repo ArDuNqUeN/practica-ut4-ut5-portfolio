@@ -269,6 +269,48 @@ section p {
     text-decoration: underline;
 }
 
+/* Grid de 1 columna y 3 filas */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna */
+    gap: 1.5rem; /* separación entre filas */
+    max-width: 400px; /* ancho máximo del grid */
+    margin: 0 auto; /* centra el grid horizontalmente */
+    text-align: center;
+}
+
+/* Tarjetas de contacto */
+.contact-card {
+    background-color: var(--negro-secundario);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* ocupa todo el ancho de la columna */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.contact-card a {
+    color: var(--morado-principal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: var(--morado-hover);
+    text-decoration: underline;
+}
+
+/* Responsive: mantiene 1 columna en móviles */
+@media (max-width: 576px) {
+    .contact-grid {
+        max-width: 90%; /* reduce el ancho en móviles */
+    }
+}
 /* ============================= */
 /* NAVBAR */
 .navbar {
